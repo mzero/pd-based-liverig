@@ -58,6 +58,8 @@
 #X obj 222 221 receive~ mix_\$1_l;
 #X obj 563 193 inlet~;
 #X obj 586 219 receive~ mix_\$1_r;
+#X obj 449 425 route pre inv;
+#X obj 445 194 inlet;
 #X connect 0 0 3 0;
 #X connect 0 0 18 4;
 #X connect 0 0 20 0;
@@ -90,4 +92,7 @@
 #X connect 24 0 21 0;
 #X connect 25 0 22 0;
 #X connect 26 0 22 0;
+#X connect 27 0 11 0;
+#X connect 27 1 14 0;
+#X connect 28 0 27 0;
 #X coords 0 -1 1 1 65 185 1 100 10;
