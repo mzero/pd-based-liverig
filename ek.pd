@@ -80,17 +80,17 @@
 -1 -1 0 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4549 1;
+-1 -1 0 1;
 #X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4507 1;
+-1 -1 0 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4424 1;
+-1 -1 0 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4632 1;
+-1 -1 0 1;
 #X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4549 1;
+-1 -1 0 1;
 #X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2880 1;
+-1 -1 0 1;
 #X obj 330 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 392 69 ctlin 95 8;
@@ -137,11 +137,11 @@
 #X obj 126 26 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 412 51 hsl 60 18 0 1 0 1 empty empty width 2 9 1 12 -262131
--1 -1 5343 0;
+-1 -1 5487 0;
 #X obj 310 51 hsl 60 18 0 2 0 1 empty empty damping 2 9 1 12 -261689
--1 -1 1765 0;
+-1 -1 2699 0;
 #X obj 310 34 hsl 60 18 0.11 1.1 0 1 empty empty roomsize 2 9 1 12
--261689 -1 -1 4042 0;
+-261689 -1 -1 4708 0;
 #X obj 339 324 freeverb~/freeverb~;
 #X obj 133 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -181,8 +181,8 @@
 #X connect 21 0 22 0;
 #X connect 22 0 11 0;
 #X coords 0 -1 1 1 185 60 1 300 10;
-#X restore 306 255 pd verb;
-#X obj 376 42 adc~;
+#X restore 242 273 pd verb;
+#X obj 312 22 adc~;
 #N canvas 813 753 623 485 flutter 0;
 #X obj 276 210 r link_tempo;
 #X obj 374 210 r link_phase;
@@ -243,7 +243,7 @@
 #X connect 25 0 16 0;
 #X connect 25 1 9 0;
 #X coords 0 -1 1 1 185 60 1 200 10;
-#X restore 307 97 pd flutter;
+#X restore 243 77 pd flutter;
 #N canvas 1584 58 629 638 mapping 1;
 #X obj 18 20 ctl-map flutter 112 12;
 #X obj 21 327 ctl-map verb-room 100 12;
@@ -254,10 +254,10 @@
 #X obj 21 114 ctl-map filt-lo-f 114 12;
 #X obj 363 243 ctl-map mix_verb 20 13;
 #X obj 363 202 ctl-map mix_dry 19 13;
-#X restore 26 592 pd mapping;
+#X restore 25 589 pd mapping;
 #N canvas 518 778 532 466 output 0;
 #X obj 132 37 hsl 42 23 0.01 1 1 0 \$0-v \$0-v volume 7 13 1 9 -245500
--13381 -1 3002 0;
+-13381 -1 3462 0;
 #X obj 176 37 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET \$0-dsp-toggle
 dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #N canvas 1019 468 429 371 dsp 0;
@@ -302,7 +302,7 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X obj 74 268 line~;
 #X obj 174 328 *~;
 #X obj 194 358 dac~;
-#X text 265 64 audio in;
+#X text 382 46 audio in;
 #X obj 315 44 inlet~;
 #X obj 236 327 *~;
 #X obj 253 115 hip~ 3;
@@ -319,6 +319,8 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X text 14 376 Created by Katja Vetter after an idea by Claude Heiland-Allen
 - Modified by mzero@ for use in ek.pd;
 #X obj 14 110 ctl-range master-vol 0.2 0 1;
+#X obj 271 67 catch~ bus_master_l;
+#X obj 346 91 catch~ bus_master_r;
 #X connect 0 0 22 0;
 #X connect 1 0 2 0;
 #X connect 3 0 10 0;
@@ -337,8 +339,10 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X connect 22 0 13 0;
 #X connect 22 0 17 0;
 #X connect 22 1 0 0;
+#X connect 23 0 10 0;
+#X connect 24 0 11 0;
 #X coords 0 -1 1 1 185 30 1 10 30;
-#X restore 312 564 pd output;
+#X restore 532 422 pd output;
 #N canvas 707 768 695 463 filter-all 0;
 #X obj 43 203 inlet~;
 #X obj 42 357 outlet~;
@@ -385,20 +389,18 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X connect 18 0 19 0;
 #X connect 19 0 12 0;
 #X coords 0 -1 1 1 185 60 1 10 10;
-#X restore 306 177 pd filter-all;
-#X obj 276 346 chan dry;
-#X obj 358 348 chan verb;
-#X connect 3 0 10 0;
-#X connect 3 1 10 1;
+#X restore 242 157 pd filter-all;
+#X obj 533 201 chan dry;
+#X obj 612 200 chan verb;
+#X obj 242 234 chan-mix dry;
+#X obj 242 346 chan-mix verb;
+#X connect 3 0 12 0;
+#X connect 3 1 12 1;
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X connect 5 0 8 0;
 #X connect 5 1 8 1;
-#X connect 8 0 3 0;
-#X connect 8 0 9 0;
-#X connect 8 1 3 1;
-#X connect 8 1 9 1;
-#X connect 9 0 7 0;
-#X connect 9 1 7 1;
-#X connect 10 0 7 0;
-#X connect 10 1 7 1;
+#X connect 8 0 11 0;
+#X connect 8 1 11 1;
+#X connect 11 0 3 0;
+#X connect 11 1 3 1;
