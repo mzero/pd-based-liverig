@@ -9,12 +9,16 @@
 #X obj 152 223 s port-uc;
 #X msg 153 200 1;
 #X obj 220 111 r resetbang;
+#X obj 115 87 s doui;
+#X obj 16 36 tgl 15 0 empty empty do_ui 17 7 0 10 -262144 -1 -1 0 1
+;
 #X connect 0 0 1 0;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
 #X connect 6 0 5 0;
 #X connect 7 0 6 0;
 #X connect 7 0 4 0;
+#X connect 9 0 8 0;
 #X coords 0 -1 1 1 185 60 2 10 10;
 #X restore 16 13 pd config;
 #N canvas 281 575 617 446 link-sync 0;
@@ -76,17 +80,17 @@
 -1 -1 0 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4465 1;
+-1 -1 4549 1;
 #X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4507 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4340 1;
+-1 -1 4424 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4632 1;
 #X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4298 1;
+-1 -1 4549 1;
 #X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4131 1;
+-1 -1 2880 1;
 #X obj 330 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 392 69 ctlin 95 8;
@@ -122,52 +126,35 @@
 #X coords 0 -1 1 1 185 60 2 200 100;
 #X restore 18 199 pd dt-volumes;
 #N canvas 460 750 818 527 verb 0;
-#X msg 537 61 roomsize \$1;
-#X msg 589 114 damping \$1;
-#X msg 634 167 width \$1;
-#X msg 56 55 print;
+#X msg 552 89 roomsize \$1;
+#X msg 550 169 damping \$1;
+#X msg 550 243 width \$1;
+#X msg 137 235 print;
 #X msg 126 45 freeze \$1;
 #X msg 131 83 bypass \$1;
 #X obj 131 64 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 126 26 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
-#X obj 403 55 hsl 60 18 0 1 0 1 empty empty width 2 9 1 12 -262131
--1 -1 2602 0;
-#X obj 322 70 hsl 60 18 0 2 0 1 empty empty damping 2 9 1 12 -261689
--1 -1 1672 0;
-#X obj 321 42 hsl 60 18 0.11 1.1 0 1 empty empty roomsize 2 9 1 12
--261689 -1 -1 1394 0;
-#X obj 252 451 freeverb~/freeverb~;
+#X obj 412 51 hsl 60 18 0 1 0 1 empty empty width 2 9 1 12 -262131
+-1 -1 5343 0;
+#X obj 310 51 hsl 60 18 0 2 0 1 empty empty damping 2 9 1 12 -261689
+-1 -1 1765 0;
+#X obj 310 34 hsl 60 18 0.11 1.1 0 1 empty empty roomsize 2 9 1 12
+-261689 -1 -1 4042 0;
+#X obj 339 324 freeverb~/freeverb~;
 #X obj 133 103 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 133 121 firstpassfilter \$1;
-#X msg 253 282 wet \$1;
-#X msg 301 282 dry \$1;
-#X obj 328 123 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#N canvas 1 80 450 300 inv 0;
-#X obj 154 69 inlet;
-#X obj 154 179 outlet;
-#X msg 154 124 1;
-#X obj 154 97 t b f;
-#X obj 154 151 -;
-#X connect 0 0 3 0;
-#X connect 2 0 4 0;
-#X connect 3 0 2 0;
-#X connect 3 1 4 1;
-#X connect 4 0 1 0;
-#X restore 302 255 pd inv;
-#X text 319 107 dry;
-#X text 444 106 wet;
-#X obj 280 417 inlet~;
-#X obj 381 428 inlet~;
-#X obj 381 473 outlet~;
-#X obj 251 475 outlet~;
-#X obj 537 37 ctl-range verb-room 0.9 0.11 1.1;
-#X obj 589 91 ctl-range verb-damp 0.915 0 2;
-#X obj 634 145 ctl-range verb-width 0.93 0 1;
-#X obj 252 211 ctl-range verb-mix 0 0 1;
+#X obj 336 250 inlet~;
+#X obj 469 290 inlet~;
+#X obj 468 346 outlet~;
+#X obj 338 348 outlet~;
+#X obj 552 65 ctl-range verb-room 0.9 0.11 1.1;
+#X obj 550 146 ctl-range verb-damp 0.915 0 2;
+#X obj 550 221 ctl-range verb-width 0.93 0 1;
+#X obj 300 166 r resetbang;
+#X msg 300 192 wet 0.707 \, dry 0;
 #X connect 0 0 11 0;
 #X connect 1 0 11 0;
 #X connect 2 0 11 0;
@@ -176,29 +163,24 @@
 #X connect 5 0 11 0;
 #X connect 6 0 5 0;
 #X connect 7 0 4 0;
-#X connect 8 0 26 0;
-#X connect 9 0 25 0;
-#X connect 10 0 24 0;
-#X connect 11 0 23 0;
-#X connect 11 1 22 0;
+#X connect 8 0 20 0;
+#X connect 9 0 19 0;
+#X connect 10 0 18 0;
+#X connect 11 0 17 0;
+#X connect 11 1 16 0;
 #X connect 12 0 13 0;
 #X connect 13 0 11 0;
 #X connect 14 0 11 0;
-#X connect 15 0 11 0;
-#X connect 16 0 27 0;
-#X connect 17 0 15 0;
-#X connect 20 0 11 0;
-#X connect 21 0 11 1;
-#X connect 24 0 0 0;
-#X connect 24 1 10 0;
-#X connect 25 0 1 0;
-#X connect 25 1 9 0;
-#X connect 26 0 2 0;
-#X connect 26 1 8 0;
-#X connect 27 0 17 0;
-#X connect 27 0 14 0;
-#X connect 27 1 16 0;
-#X coords 0 -1 1 1 185 180 1 300 10;
+#X connect 15 0 11 1;
+#X connect 18 0 0 0;
+#X connect 18 1 10 0;
+#X connect 19 0 1 0;
+#X connect 19 1 9 0;
+#X connect 20 0 2 0;
+#X connect 20 1 8 0;
+#X connect 21 0 22 0;
+#X connect 22 0 11 0;
+#X coords 0 -1 1 1 185 60 1 300 10;
 #X restore 306 255 pd verb;
 #X obj 376 42 adc~;
 #N canvas 813 753 623 485 flutter 0;
@@ -262,19 +244,20 @@
 #X connect 25 1 9 0;
 #X coords 0 -1 1 1 185 60 1 200 10;
 #X restore 307 97 pd flutter;
-#N canvas 1586 60 629 638 mapping 1;
+#N canvas 1584 58 629 638 mapping 1;
 #X obj 18 20 ctl-map flutter 112 12;
 #X obj 21 327 ctl-map verb-room 100 12;
 #X obj 22 369 ctl-map verb-damp 101 12;
 #X obj 23 409 ctl-map verb-width 102 12;
-#X obj 23 287 ctl-map verb-mix 96 12;
 #X obj 386 23 ctl-map master-vol 23 13;
 #X obj 21 72 ctl-map filt-hi-f 113 12;
 #X obj 21 114 ctl-map filt-lo-f 114 12;
+#X obj 363 243 ctl-map mix_verb 20 13;
+#X obj 363 202 ctl-map mix_dry 19 13;
 #X restore 26 592 pd mapping;
-#N canvas 738 740 532 466 output 0;
+#N canvas 518 778 532 466 output 0;
 #X obj 132 37 hsl 42 23 0.01 1 1 0 \$0-v \$0-v volume 7 13 1 9 -245500
--13381 -1 4100 0;
+-13381 -1 3002 0;
 #X obj 176 37 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET \$0-dsp-toggle
 dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #N canvas 1019 468 429 371 dsp 0;
@@ -355,7 +338,7 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X connect 22 0 17 0;
 #X connect 22 1 0 0;
 #X coords 0 -1 1 1 185 30 1 10 30;
-#X restore 306 455 pd output;
+#X restore 312 564 pd output;
 #N canvas 707 768 695 463 filter-all 0;
 #X obj 43 203 inlet~;
 #X obj 42 357 outlet~;
@@ -403,11 +386,19 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X connect 19 0 12 0;
 #X coords 0 -1 1 1 185 60 1 10 10;
 #X restore 306 177 pd filter-all;
-#X connect 3 0 7 0;
-#X connect 3 1 7 1;
+#X obj 276 346 chan dry;
+#X obj 358 348 chan verb;
+#X connect 3 0 10 0;
+#X connect 3 1 10 1;
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X connect 5 0 8 0;
 #X connect 5 1 8 1;
 #X connect 8 0 3 0;
+#X connect 8 0 9 0;
 #X connect 8 1 3 1;
+#X connect 8 1 9 1;
+#X connect 9 0 7 0;
+#X connect 9 1 7 1;
+#X connect 10 0 7 0;
+#X connect 10 1 7 1;
