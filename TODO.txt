@@ -1,0 +1,25 @@
+patch tasks
+
+
+== Config ==
+    [x] resetbang
+        - sent on loadbang
+    [ ] reset bang on some midi button that is "reset"
+    [x] midi port assignments for dt & uc
+    [ ] midi control mapping sub-patch w/sends
+
+== Link ==
+    [x] sub patch for link
+    [x] output tempo for UC44
+        [x] ? pitch wheel = tempo * 10 on ch 13?
+    [x] fine and coarse encoder inputs to adjust tempo
+    [x] resetbang for connecting to Link
+    [x] output number of connected links to a displayed control on UC44
+
+== Audio Chain ==
+    [ ] looper
+    [ ] cross fade
+    [ ] eq 3
+    [ ] multi-delay
+    [ ] mix
+    [x] reverb

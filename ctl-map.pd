@@ -1,0 +1,17 @@
+#N canvas 555 392 450 300 10;
+#X obj 137 67 ctlin \$2 \$3;
+#X obj 138 143 ctlout \$2 \$3;
+#X obj 180 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 13 25 hsl 165 15 0 127 0 0 empty empty empty -2 -8 0 10 -262130
+-1 -1 0 1;
+#X msg 45 159 set \$1;
+#X obj 138 93 s ctl_\$1;
+#X obj 138 117 r ctl_\$1;
+#X connect 0 0 2 0;
+#X connect 0 0 5 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 6 0 1 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 185 30 1 10 10;

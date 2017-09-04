@@ -1,0 +1,8 @@
+#N canvas 971 747 450 300 10;
+#X obj 105 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 105 214 print \$0-args;
+#X obj 105 186 pack 42 \$1 s\$2;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
