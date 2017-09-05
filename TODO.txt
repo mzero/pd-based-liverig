@@ -2,24 +2,25 @@ patch tasks
 
 
 == Config ==
-    [x] resetbang
-        - sent on loadbang
     [ ] reset bang on some midi button that is "reset"
-    [x] midi port assignments for dt & uc
-    [ ] midi control mapping sub-patch w/sends
+    [ ] nuke old dt-port and uc-port things
 
 == Link ==
-    [x] sub patch for link
-    [x] output tempo for UC44
-        [x] ? pitch wheel = tempo * 10 on ch 13?
-    [x] fine and coarse encoder inputs to adjust tempo
-    [x] resetbang for connecting to Link
-    [x] output number of connected links to a displayed control on UC44
+    [ ] test accuracy of link sync
 
 == Audio Chain ==
     [ ] looper
-    [ ] cross fade
     [ ] eq 3
-    [ ] multi-delay
-    [ ] mix
-    [x] reverb
+    [x] multi-delay
+        [ ] missing filters
+    [ ] - try openair~ convoultion reverb
+    [ ] ?? how to route between verb and belay?
+
+== MISC ===
+    [ ] "Sane" toggles for each section
+        [ ] then have reset bang trigger those
+        [ ] name silders send 'em values
+    [ ] reset bang doesn't send initial
+        value to MIDI controls
+    [ ] zippering on hp/lp filter controls
+
