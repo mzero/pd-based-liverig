@@ -6,7 +6,12 @@ patch tasks
     [ ] nuke old dt-port and uc-port things
 
 == Link ==
-    [ ] test accuracy of link sync
+    [x] test accuracy of link sync
+    [x] sync to the "1" with a start command
+        - on "request" from a control
+        - since MIDI Start causes DT to reset
+        - the conditional measure count
+    [x] improve accuracy of displayed tempo on UC44
 
 == Audio Chain ==
     [ ] looper
@@ -20,7 +25,15 @@ patch tasks
     [ ] "Sane" toggles for each section
         [ ] then have reset bang trigger those
         [ ] name silders send 'em values
-    [ ] reset bang doesn't send initial
-        value to MIDI controls
+
+    [ ] send initial value to MIDI controls
+        [ ] a few ms after resetbang?
+
     [ ] zippering on hp/lp filter controls
+
+    [ ] ctl-scale abstraction
+        rather than current ctl-range
+
+    [ ] listen for patch change from DT
+        - then resend all volume faders
 
