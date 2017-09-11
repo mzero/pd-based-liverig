@@ -1,4 +1,4 @@
-#N canvas 791 540 519 474 10;
+#N canvas 1308 216 519 474 10;
 #X obj 196 189 r ctl_\$1;
 #X obj 197 89 inlet;
 #X obj 196 271 outlet;
@@ -9,11 +9,18 @@
 #X obj 249 62 r resetbang;
 #X obj 196 130 expr 127 * ($f1 - \$3) / (\$4 - \$3);
 #X obj 196 213 expr ($f1 / 127) * (\$4 - \$3) + \$3;
+#X obj 64 86 change;
+#X obj 64 61 r ctl_\$1_range;
+#X obj 62 297 s ctl_\$1_range;
 #X connect 0 0 9 0;
 #X connect 1 0 8 0;
 #X connect 5 0 3 0;
+#X connect 5 0 10 0;
 #X connect 6 0 8 0;
 #X connect 7 0 6 0;
 #X connect 8 0 4 0;
 #X connect 9 0 5 0;
 #X connect 9 0 2 0;
+#X connect 9 0 12 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 0;

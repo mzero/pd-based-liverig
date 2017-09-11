@@ -1,9 +1,10 @@
 patch tasks
 
 
+
+
 == Config ==
-    [ ] reset bang on some midi button that is "reset"
-    [ ] nuke old dt-port and uc-port things
+>>  [ ] nuke old dt-port and uc-port things
 
 == Link ==
     [x] test accuracy of link sync
@@ -15,25 +16,34 @@ patch tasks
 
 == Audio Chain ==
     [ ] looper
-    [ ] eq 3
+    [x] eq 3
     [x] multi-delay
         [ ] missing filters
     [ ] - try openair~ convoultion reverb
     [ ] ?? how to route between verb and belay?
 
 == MISC ===
-    [ ] "Sane" toggles for each section
+>>  [ ] "Sane" toggles for each section
         [ ] then have reset bang trigger those
         [ ] name silders send 'em values
 
-    [ ] send initial value to MIDI controls
+>>  [ ] send initial value to MIDI controls
         [ ] a few ms after resetbang?
 
     [ ] zippering on hp/lp filter controls
 
-    [ ] ctl-scale abstraction
-        rather than current ctl-range
+== Controls ==
+>>  [ ] reset button & re-send controls button
+    [ ] encoder button should be a note that causes a reset
+        - esp. for eq3 controls
+        - esp. for reverb controls
+    [ ] sync start should be a button, not a control
+    [ ] consider using quantize display format for beat based controls
+        - flutter
+        - delay length
 
+== Digitakt ==
+    [ ] mutes? worth trying to get to work?
+        - unmute on reset?
     [ ] listen for patch change from DT
         - then resend all volume faders
-
