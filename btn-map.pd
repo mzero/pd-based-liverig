@@ -1,0 +1,31 @@
+#N canvas 555 392 460 424 10;
+#X obj 237 254 t b f;
+#X obj 238 100 spigot, f 9;
+#X obj 238 50 swap, f 9;
+#X obj 238 127 > 0;
+#X obj 164 25 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+1;
+#X obj 237 227 * 127;
+#X obj 179 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 238 25 notein \$3;
+#X obj 298 74 == \$2;
+#X obj 238 154 s btn_\$1;
+#X obj 237 201 r btn_\$1;
+#X obj 208 283 float \$2;
+#X obj 238 309 noteout \$3;
+#X connect 0 0 11 0;
+#X connect 0 1 12 1;
+#X connect 1 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 2 1 8 0;
+#X connect 3 0 4 0;
+#X connect 3 0 9 0;
+#X connect 5 0 0 0;
+#X connect 7 0 2 0;
+#X connect 7 1 2 1;
+#X connect 8 0 1 1;
+#X connect 10 0 5 0;
+#X connect 11 0 12 0;
+#X coords 0 -1 1 1 185 30 1 10 10;

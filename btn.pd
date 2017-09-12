@@ -1,0 +1,12 @@
+#N canvas 834 886 450 300 10;
+#X obj 163 93 t f f, f 13;
+#X obj 163 144 select 1;
+#X obj 163 119 change 0;
+#X obj 163 66 r btn_\$1;
+#X obj 163 171 outlet;
+#X obj 251 173 outlet;
+#X connect 0 0 2 0;
+#X connect 0 1 5 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;

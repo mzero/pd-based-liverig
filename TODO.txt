@@ -4,7 +4,9 @@ patch tasks
 
 
 == Config ==
->>  [ ] nuke old dt-port and uc-port things
+    [ ] redo dt-port and uc-port things
+        - should be abstractions so port assignments can be edited
+        - should be used on 8 slider sub-patch to calculate channel numbers
 
 == Link ==
     [x] test accuracy of link sync
@@ -23,9 +25,9 @@ patch tasks
     [ ] ?? how to route between verb and belay?
 
 == MISC ===
->>  [ ] "Sane" toggles for each section
-        [ ] then have reset bang trigger those
-        [ ] name silders send 'em values
+    [x] "Sane" toggles for each section
+        [ ] ? then have reset bang trigger those
+        [x] name silders send 'em values
 
 >>  [ ] send initial value to MIDI controls
         [ ] a few ms after resetbang?
