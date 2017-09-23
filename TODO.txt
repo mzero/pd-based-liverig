@@ -17,10 +17,21 @@ patch tasks
     [x] improve accuracy of displayed tempo on UC44
 
 == Audio Chain ==
-    [ ] looper
+    [ ] looper / stutter
+        [ ] meter from link section rather than built in
+        [ ] check that stutters are at right place
+        [ ] lengthen buffers
+        [ ] set display properties to show one bar?
+        [ ] extras
+            [ ] slow/stop time
+            [ ] reverse?
+            [ ] fade out (or just control looper volume from fader?)
+
+    [ ] multi-band compressor / saturation
     [x] eq 3
+        [ ] move to end?
     [x] multi-delay
-        [ ] missing filters
+        [ ] missing filters?
     [ ] - try openair~ convoultion reverb
     [ ] ?? how to route between verb and belay?
 
