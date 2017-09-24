@@ -18,10 +18,14 @@ patch tasks
 
 == Audio Chain ==
     [ ] looper / stutter
-        [ ] meter from link section rather than built in
-        [ ] check that stutters are at right place
-        [ ] lengthen buffers
         [ ] set display properties to show one bar?
+        [ ] check that stutters are at right place
+        [ ] whole bar loop button
+        [ ] fade rate
+        [ ] inv. fader on loop (?)
+
+        [ ] quantum/beat from link section rather than built in
+        [ ] lengthen buffers
         [ ] extras
             [ ] slow/stop time
             [ ] reverse?
