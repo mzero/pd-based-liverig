@@ -18,14 +18,16 @@ patch tasks
 
 == Audio Chain ==
     [ ] looper / stutter
-        [ ] set display properties to show one bar?
-        [ ] check that stutters are at right place
+        [-] set display properties to show one bar?
+            - can't work: buffer draw doesn't clip, and lags DSP when changed!
+        [x] check that stutters are at right place
+        [x] quantum/beat from link section rather than built in
+        [x] lengthen buffers
+
         [ ] whole bar loop button
         [ ] fade rate
         [ ] inv. fader on loop (?)
 
-        [ ] quantum/beat from link section rather than built in
-        [ ] lengthen buffers
         [ ] extras
             [ ] slow/stop time
             [ ] reverse?
