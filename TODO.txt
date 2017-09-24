@@ -25,10 +25,9 @@ patch tasks
         [x] quantum/beat from link section rather than built in
         [x] lengthen buffers
         [x] whole bar loop button
+        [x] fade rate
 
-        [ ] fade rate
         [ ] inv. fader on input
-
         [ ] extras
             [ ] slow/stop time
             [ ] reverse?
