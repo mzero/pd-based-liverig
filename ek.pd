@@ -119,19 +119,19 @@
 -1 -1 4048 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4006 1;
+-1 -1 3965 1;
 #X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 3965 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4257 1;
+-1 -1 4298 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4382 1;
-#X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4257 1;
-#X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 4131 1;
+#X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4215 1;
+#X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3839 1;
 #X obj 330 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4006 1;
+-1 -1 3839 1;
 #X obj 392 69 ctlin 95 8;
 #X obj 387 177 ctlout 95 24;
 #X obj 375 48 ctlin 95 7;
@@ -176,11 +176,11 @@
 #X obj 126 63 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 412 51 hsl 60 18 0 1 0 1 ctl_verb-width_range ctl_verb-width_range
-width 2 9 1 12 -262131 -1 -1 5296 0;
+width 2 9 1 12 -262131 -1 -1 2950 0;
 #X obj 310 51 hsl 60 18 0 2 0 1 ctl_verb-damp_range ctl_verb-damp_range
-damping 2 9 1 12 -261689 -1 -1 2044 0;
+damping 2 9 1 12 -261689 -1 -1 1180 0;
 #X obj 310 34 hsl 60 18 0.11 1.1 0 1 ctl_verb-room_range ctl_verb-room_range
-roomsize 2 9 1 12 -261689 -1 -1 3995 0;
+roomsize 2 9 1 12 -261689 -1 -1 2324 0;
 #X obj 339 361 freeverb~/freeverb~;
 #X obj 133 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -291,7 +291,7 @@ roomsize 2 9 1 12 -261689 -1 -1 3995 0;
 #X connect 28 0 26 0;
 #X coords 0 -1 1 1 185 60 1 200 10;
 #X restore 244 151 pd flutter;
-#N canvas 717 731 649 561 mapping 0;
+#N canvas 1461 61 649 561 mapping 0;
 #X obj 28 342 ctl-map verb-room 100 12;
 #X obj 28 372 ctl-map verb-damp 101 12;
 #X obj 28 402 ctl-map verb-width 102 12;
@@ -303,10 +303,10 @@ roomsize 2 9 1 12 -261689 -1 -1 3995 0;
 #X obj 72 260 ctl-map belay-beats 119 12;
 #X obj 311 137 ctl-map mix_belay 21 13;
 #X obj 66 487 ctl-map sync-play 98 13;
-#X obj 362 456 ctlin, f 12;
-#X floatatom 363 485 5 0 0 0 - - -, f 5;
-#X floatatom 405 485 5 0 0 0 - - -, f 5;
-#X floatatom 446 485 5 0 0 0 - - -, f 5;
+#X obj 355 478 ctlin, f 12;
+#X floatatom 356 507 5 0 0 0 - - -, f 5;
+#X floatatom 398 507 5 0 0 0 - - -, f 5;
+#X floatatom 439 507 5 0 0 0 - - -, f 5;
 #X obj 362 200 ctl-map eq-lo 80 14;
 #X obj 362 230 ctl-map eq-mid 81 14;
 #X obj 362 260 ctl-map eq-hi 82 14;
@@ -320,13 +320,21 @@ roomsize 2 9 1 12 -261689 -1 -1 3995 0;
 #X obj 24 85 ctl-map filt-hi-f 114 12;
 #X obj 24 115 ctl-map filt-lo-f 115 12;
 #X obj 24 25 ctl-map loop-sttt 16 13;
+#X obj 504 477 notein, f 12;
+#X floatatom 505 505 5 0 0 0 - - -, f 5;
+#X floatatom 547 505 5 0 0 0 - - -, f 5;
+#X floatatom 588 505 5 0 0 0 - - -, f 5;
+#X obj 362 414 btn-raw loop-play 16 13;
 #X connect 11 0 12 0;
 #X connect 11 1 13 0;
 #X connect 11 2 14 0;
+#X connect 28 0 29 0;
+#X connect 28 1 30 0;
+#X connect 28 2 31 0;
 #X restore 25 589 pd mapping;
 #N canvas 518 778 532 466 output 0;
 #X obj 132 37 hsl 42 23 0.01 1 1 0 \$0-v \$0-v volume 7 13 1 9 -245500
--13381 -1 2667 0;
+-13381 -1 3666 0;
 #X obj 176 37 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET \$0-dsp-toggle
 dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #N canvas 1019 468 429 371 dsp 0;
@@ -494,9 +502,9 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X obj 130 229 line~;
 #X obj 303 274 *~;
 #X obj 18 33 hsl 60 18 0 1 0 1 ctl_belay-feed_range ctl_belay-feed_range
-feedback 2 9 1 12 -261234 -1 -1 2555 0;
+feedback 2 9 1 12 -261234 -1 -1 885 0;
 #X obj 18 52 hsl 60 18 0 1 0 1 ctl_belay-cross_range ctl_belay-cross_range
-cross 2 9 1 12 -261234 -1 -1 0 0;
+cross 2 9 1 12 -261234 -1 -1 1180 0;
 #X obj 122 35 hsl 60 18 1 16 0 1 ctl_belay-beats_range ctl_belay-beats_range
 beats 2 9 1 12 -204800 -1 -1 1967 0;
 #X obj 82 332 pack 0 10;
@@ -653,7 +661,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X connect 27 0 26 0;
 #X coords 0 -1 1 1 185 60 1 300 10;
 #X restore 243 224 pd eq;
-#N canvas 858 425 1065 838 loopz 0;
+#N canvas 406 429 1065 838 loopz 0;
 #X obj 547 269 inlet~;
 #X obj 225 19 r link_phase;
 #X obj 23 47 tgl 15 0 empty loop-playing playback 0 -7 0 10 -262144
@@ -808,7 +816,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 339 426 tgl 15 0 empty empty whole_bar 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 41 47 hsl 160 15 0 1 0 0 empty loop-play-pos empty -2 -8 0 10
--262144 -1 -1 10021 1;
+-262144 -1 -1 3591 1;
 #X obj 361 447 tgl 15 0 empty empty 1/4s 17 7 0 10 -262144 -1 -1 0
 4;
 #X obj 701 460 ctl loop-sttt 0;
@@ -827,13 +835,21 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 197 340 buf-params b;
 #X obj 106 543 list;
 #X obj 200 543 list;
-#X obj 559 144 array define loop-al;
-#X obj 559 167 array define loop-ar;
-#X obj 716 144 array define loop-bl;
-#X obj 716 167 array define loop-br;
-#X msg 671 79 resize 360000 \, const 0;
-#X obj 672 52 loadbang;
+#X obj 445 124 array define loop-al;
+#X obj 445 147 array define loop-ar;
+#X obj 602 124 array define loop-bl;
+#X obj 602 147 array define loop-br;
+#X msg 557 59 resize 360000 \, const 0;
+#X obj 558 32 loadbang;
 #X obj 308 73 r loop-playing;
+#X obj 878 216 r loop-playing;
+#X obj 793 204 > 0;
+#X msg 846 306 1;
+#X obj 793 181 r btn_loop-play_in;
+#X obj 878 244 s btn_loop-play_out;
+#X obj 793 250 int;
+#X obj 793 278 select 1;
+#X obj 793 227 select 1;
 #X connect 0 0 13 0;
 #X connect 0 0 14 0;
 #X connect 0 0 32 0;
@@ -909,6 +925,15 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X connect 60 0 59 0;
 #X connect 61 0 60 0;
 #X connect 62 0 5 0;
+#X connect 63 0 67 0;
+#X connect 63 0 68 1;
+#X connect 64 0 70 0;
+#X connect 65 0 27 0;
+#X connect 66 0 64 0;
+#X connect 68 0 69 0;
+#X connect 69 0 26 0;
+#X connect 69 1 65 0;
+#X connect 70 0 68 0;
 #X coords 0 -1 1 1 185 60 1 20 20;
 #X restore 244 74 pd loopz;
 #X obj 693 200 chan belay;

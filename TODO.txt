@@ -15,6 +15,7 @@ patch tasks
         - since MIDI Start causes DT to reset
         - the conditional measure count
     [x] improve accuracy of displayed tempo on UC44
+    [ ] send quantum change on edit? possible?
 
 == Audio Chain ==
     [ ] looper / stutter
@@ -23,15 +24,14 @@ patch tasks
         [x] check that stutters are at right place
         [x] quantum/beat from link section rather than built in
         [x] lengthen buffers
+        [x] whole bar loop button
 
-        [ ] whole bar loop button
         [ ] fade rate
-        [ ] inv. fader on loop (?)
+        [ ] inv. fader on input
 
         [ ] extras
             [ ] slow/stop time
             [ ] reverse?
-            [ ] fade out (or just control looper volume from fader?)
 
     [ ] multi-band compressor / saturation
     [x] eq 3
