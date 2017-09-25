@@ -26,8 +26,7 @@ patch tasks
         [x] lengthen buffers
         [x] whole bar loop button
         [x] fade rate
-
-        [ ] inv. fader on input
+        [x] inv. fader on input
         [ ] extras
             [ ] slow/stop time
             [ ] reverse?
@@ -59,6 +58,10 @@ patch tasks
     [ ] consider using quantize display format for beat based controls
         - flutter
         - delay length
+
+    [ ] various quantized controls should display quantized indicators
+        - for these, the UC44 needs to be set for display ext. only
+        - and there will be distinct display vs. input busses
 
 == Digitakt ==
     [ ] mutes? worth trying to get to work?
