@@ -1,5 +1,5 @@
 #N canvas 564 60 866 643 10;
-#N canvas 1392 157 725 300 config 1;
+#N canvas 1392 157 725 300 config 0;
 #X obj 41 86 loadbang;
 #X obj 22 109 s resetbang;
 #X obj 16 15 bng 15 250 50 0 empty empty reset_bang! 17 7 0 10 -262144
@@ -29,7 +29,7 @@
 #X connect 13 0 10 0;
 #X coords 0 -1 1 1 185 60 2 10 10;
 #X restore 16 12 pd config;
-#N canvas 141 709 721 605 link-sync 1;
+#N canvas 141 709 721 605 link-sync 0;
 #X msg 34 117 connect 1;
 #X obj 123 510 midiout;
 #X obj 218 473 r port-dt;
@@ -133,11 +133,11 @@
 -1 -1 3506 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3464 1;
-#X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 3213 1;
+#X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3798 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3005 1;
+-1 -1 3380 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 3881 1;
 #X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
@@ -1047,6 +1047,80 @@ for a full bar;
 #X coords 0 -1 1 1 185 60 1 20 20;
 #X restore 244 74 pd loopz;
 #X obj 693 200 chan belay;
+#N canvas 683 768 978 409 notes 0;
+#X obj 218 87 notein;
+#X obj 379 48 r port-kb;
+#X obj 212 233 noteout;
+#X obj 473 50 r port-dt;
+#X obj 563 50 r port-ci;
+#X obj 379 94 * 16;
+#X obj 379 71 - 1;
+#X obj 472 96 * 16;
+#X obj 472 73 - 1;
+#X obj 563 97 * 16;
+#X obj 563 74 - 1;
+#X obj 491 135 + 14;
+#X obj 534 134 + 1;
+#X obj 572 134 + 2;
+#X obj 184 162 spigot;
+#X obj 443 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 469 167 set \$1;
+#X floatatom 469 191 5 0 0 0 - - -, f 5;
+#X obj 531 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 557 168 set \$1;
+#X floatatom 557 192 5 0 0 0 - - -, f 5;
+#X obj 624 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 650 168 set \$1;
+#X floatatom 650 192 5 0 0 0 - - -, f 5;
+#X obj 558 226 s kb-outch;
+#X obj 258 200 r kb-outch;
+#X obj 14 80 r kb-outch;
+#X obj 265 123 expr $i1 > $i2 && $i1 <= ($i2 + 16), f 17;
+#X floatatom 104 55 5 0 0 0 - - -, f 5;
+#X floatatom 149 55 5 0 0 0 - - -, f 5;
+#X obj 14 110 expr ($i1-1)/16 + 1 \; $i1-($i1-1)/16*16;
+#X text 103 34 port;
+#X text 151 34 ch;
+#X floatatom 297 167 5 0 0 0 - - -, f 5;
+#X floatatom 361 176 5 0 0 0 - - -, f 5;
+#X connect 0 0 14 0;
+#X connect 0 1 2 1;
+#X connect 0 2 27 0;
+#X connect 1 0 6 0;
+#X connect 3 0 8 0;
+#X connect 4 0 10 0;
+#X connect 5 0 27 1;
+#X connect 5 0 34 0;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 7 0;
+#X connect 9 0 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 9 0;
+#X connect 11 0 16 0;
+#X connect 12 0 19 0;
+#X connect 13 0 22 0;
+#X connect 14 0 2 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 0;
+#X connect 17 0 24 0;
+#X connect 18 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 24 0;
+#X connect 21 0 23 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 25 0 2 2;
+#X connect 26 0 30 0;
+#X connect 27 0 14 1;
+#X connect 27 0 33 0;
+#X connect 30 0 28 0;
+#X connect 30 1 29 0;
+#X coords 0 -1 1 1 185 60 1 100 10;
+#X restore 23 304 pd notes;
 #X connect 3 0 10 0;
 #X connect 3 1 10 1;
 #X connect 4 0 18 0;
