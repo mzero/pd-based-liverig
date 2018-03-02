@@ -9,15 +9,14 @@ patch tasks
             -- controls gain of filter or final mix in all modes!
     [ ] volume encoders (!)
         [ ] route direct or via DT?
-    [ ] other CCs?
-        [ ] modwheel = 1
-        [ ] carrier attack, release = 80 & 81
+    [x] other CCs?
+        [-] modwheel = 1
+        [-] carrier attack, release = 80 & 81
             -- nice idea, but destroys patch, not mods, so better to do this
                 via the mod matrix
-        [ ] carrier release = 81
-        [ ] performance params: 115..118
-        [ ] mod matrix multipliers: 46..49
-        [ ] filter parameters: 71, 72
+        [x] performance params: 115..118
+        [-] mod matrix multipliers: 46..49
+        [-] filter parameters: 71, 72
 
 
     [ ] power? USB to Pi? USB to power? Power Adapter?
@@ -28,6 +27,19 @@ patch tasks
     [ ] keyboard router
         [ ] add third selector
 
+
+[ ] GO button
+    [ ] convert from ctl to note push button
+    [ ] make indicator be beat count down
+
+[ ] loop play button display
+    -- doesn't work, not sure why
+    -- is this because button isn't toggle?
+
+[ ] keyboard router buttons
+    [ ] extend to all four preenFM2 channels
+
+[ ] forward PreenFM2 controls
 
 
 [ ] timers
@@ -46,14 +58,22 @@ patch tasks
     [ ] a button to request this send
     [ ] debug why at start up not all "right"
 
-[ ] volume of preenFM2 instruments
-    [ ] 2? 4?
-    [ ] faders? encoders?
-
 [ ] review looper
 
+[ ] display only controls
+    - should ignore encoder changes
+    [ ] set encoder min/max to 0?
+    [ ] patch control to resend current value?
+    [ ] link participant count
+    [ ] GO button
+    [ ] timers
 
+[ ] beat quantized controls
+    - display in FF quant. format
+    [ ] loop fade
+    [ ] flutter
 
+[ ] eq controls should be bipolar
 
 
 
@@ -83,18 +103,10 @@ LATERS
     [ ] zippering on hp/lp filter controls
 
 == Controls ==
-    [ ] move looper & BPM controls together
     [ ] encoder button should be a note that causes a reset
         - esp. for eq3 controls
         - esp. for reverb controls
-    [ ] sync start should be a button, not a control
-    [ ] consider using quantize display format for beat based controls
-        - flutter
-        - delay length
 
-    [ ] various quantized controls should display quantized indicators
-        - for these, the UC44 needs to be set for display ext. only
-        - and there will be distinct display vs. input busses
 
 == Digitakt ==
     [ ] unsolo ALL!!!!!
