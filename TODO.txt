@@ -2,31 +2,13 @@ patch tasks
 
 
 
+[ ] forward PreenFM2 controls
 
-[ ] PreenFM2
-    [x] how to control volume?
-        [x] CC_FILTER_GAIN, 73
-            -- controls gain of filter or final mix in all modes!
-    [ ] volume encoders (!)
-        [ ] route direct or via DT?
-    [x] other CCs?
-        [-] modwheel = 1
-        [-] carrier attack, release = 80 & 81
-            -- nice idea, but destroys patch, not mods, so better to do this
-                via the mod matrix
-        [x] performance params: 115..118
-        [-] mod matrix multipliers: 46..49
-        [-] filter parameters: 71, 72
+[x] keyboard router buttons
+    [x] extend to all four preenFM2 channels
 
 
-    [ ] power? USB to Pi? USB to power? Power Adapter?
-    [ ] three patches
-        [ ] bass
-        [ ] pad
-        [ ] plucky
-    [ ] keyboard router
-        [ ] add third selector
-
+[ ] sane button for PreenFM2 controls
 
 [ ] GO button
     [ ] convert from ctl to note push button
@@ -36,11 +18,30 @@ patch tasks
     -- doesn't work, not sure why
     -- is this because button isn't toggle?
 
-[ ] keyboard router buttons
-    [ ] extend to all four preenFM2 channels
 
-[ ] forward PreenFM2 controls
+[ ] PreenFM2
+    [x] how to control volume?
+        [x] CC_FILTER_GAIN, 73
+            -- controls gain of filter or final mix in all modes!
+    [x] other CCs?
+        [-] modwheel = 1
+        [-] carrier attack, release = 80 & 81
+            -- nice idea, but destroys patch, not mods, so better to do this
+                via the mod matrix
+        [x] performance params: 115..118
+        [-] mod matrix multipliers: 46..49
+        [-] filter parameters: 71, 72
 
+    [x] power? USB to Pi? USB to power? Power Adapter?
+        - USB to Pi
+    [ ] three patches
+        [ ] bass
+        [ ] pad
+        [ ] plucky
+
+[ ] convolution reverb
+    [ ] choose from several fixed choices
+    [ ] other controls?
 
 [ ] timers
     [ ] total timer
@@ -48,10 +49,6 @@ patch tasks
     [ ] display: two segments, direct mode
     [ ] left encoder push: reset (if stopped)
     [ ] right encoder push: start / stop
-
-[ ] convolution reverb
-    [ ] choose from several fixed choices
-    [ ] other controls?
 
 [ ] send initial value to MIDI controls
     [ ] a few ms after resetbang?
@@ -74,6 +71,13 @@ patch tasks
     [ ] flutter
 
 [ ] eq controls should be bipolar
+
+[ ] button control issues
+    [ ] faderfox is sending 0/1, but pd is sending 0/127 to set led
+    [ ] buttons fire on both down and up
+        -- buttons control local display, so up turns off (when not in toggle)
+        [ ] either activate, send on up for such controls
+        [ ] -or- disable FF local control of LED?
 
 
 
