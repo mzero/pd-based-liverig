@@ -2,7 +2,8 @@ patch tasks
 
 
 
-[ ] forward PreenFM2 controls
+[x] forward PreenFM2 controls
+    [ ] forward back to UC if not from UC
 
 [x] keyboard router buttons
     [x] extend to all four preenFM2 channels
