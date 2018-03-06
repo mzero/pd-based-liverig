@@ -9,7 +9,10 @@ patch tasks
     [x] extend to all four preenFM2 channels
 
 
-[ ] sane button for PreenFM2 controls
+[x] sane button for PreenFM2 controls
+[x] reorder keyboard selects so PreenFM match PreenFM controls
+[x] reset all
+
 
 [ ] GO button
     [ ] convert from ctl to note push button
