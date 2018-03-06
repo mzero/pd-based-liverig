@@ -1,0 +1,14 @@
+#N canvas 349 644 450 300 10;
+#X msg 138 21 set 30;
+#X msg 154 44 reset;
+#X msg 207 44 resetif;
+#X msg 206 87 start;
+#X msg 264 87 stop;
+#X msg 313 89 toggle;
+#X obj 136 163 wallclock;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;

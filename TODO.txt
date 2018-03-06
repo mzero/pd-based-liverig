@@ -47,12 +47,13 @@ patch tasks
     [ ] choose from several fixed choices
     [ ] other controls?
 
-[ ] timers
-    [ ] total timer
-    [ ] segment timer
-    [ ] display: two segments, direct mode
-    [ ] left encoder push: reset (if stopped)
-    [ ] right encoder push: start / stop
+[x] timers
+    [x] total timer
+    [x] segment timer
+    [x] display: two segments, direct mode
+    [x] left encoder push: reset (if stopped)
+    [x] right encoder push: start / stop
+    [x] reset segment timer on program change
 
 [ ] send initial value to MIDI controls
     [ ] a few ms after resetbang?
