@@ -6,7 +6,7 @@
 -1 -258113;
 #X obj 245 15 r resetbang;
 #X obj 16 108 s doui;
-#X obj 16 36 tgl 15 0 empty empty do_ui 17 7 0 10 -262144 -1 -1 1 1
+#X obj 16 36 tgl 15 0 empty empty do_ui 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X msg 245 44 \; port-uc 1 \; port-dt 2 \; port-pf 3 \; port-kb 4,
 f 11;
@@ -122,19 +122,19 @@ f 11;
 -1 -1 4048 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4507 1;
 #X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4173 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3506 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3589 1;
 #X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4131 1;
 #X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3923 1;
 #X obj 330 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4048 1;
 #X obj 392 69 ctlin 95 8;
 #X obj 387 177 ctlout 95 24;
 #X obj 375 48 ctlin 95 7;
@@ -229,39 +229,57 @@ roomsize 2 9 1 12 -261689 -1 -1 2324 0;
 #X coords 0 -1 1 1 185 60 1 300 10;
 #X restore 314 455 pd verb;
 #X obj 312 22 adc~;
-#N canvas 56 726 623 485 flutter 0;
-#X obj 276 210 r link_tempo;
-#X obj 374 210 r link_phase;
-#X obj 267 310 osc~ 2;
-#X obj 276 236 / 60;
-#X obj 373 235 - 0.2;
-#X obj 260 272 *;
-#X obj 217 233 t b f;
-#X floatatom 217 307 5 0 0 0 - - -, f 5;
-#X obj 322 270 *;
+#N canvas 604 531 1374 601 flutter 0;
+#X obj 241 122 r link_tempo;
+#X obj 339 122 r link_phase;
+#X obj 266 310 osc~ 2;
+#X obj 240 145 / 60;
+#X obj 339 146 - 0.2;
+#X obj 243 281 *;
+#X obj 131 217 t b f;
+#X floatatom 202 315 5 0 0 0 - - -, f 5;
+#X obj 312 280 *;
 #X obj 224 50 hsl 140 15 0 127 0 0 ctl_flutter ctl_flutter off_|__8_|_16_|_32_|_64_
 0 8 0 10 -204786 -1 -1 0 1;
-#X obj 194 415 inlet~;
-#X obj 273 416 inlet~;
-#X obj 274 482 outlet~;
-#X obj 195 482 outlet~;
-#X obj 203 449 *~;
-#X obj 283 447 *~;
+#X obj 444 409 inlet~;
+#X obj 523 410 inlet~;
+#X obj 527 567 outlet~;
+#X obj 448 567 outlet~;
+#X obj 463 487 *~;
+#X obj 543 485 *~;
 #X obj 129 118 * 5;
 #X obj 129 140 / 128;
 #X obj 129 163 int;
-#X obj 501 193 min 1;
-#X obj 501 217 change;
-#X obj 500 261 line~;
+#X obj 415 186 min 1;
+#X obj 415 210 change;
+#X obj 414 254 line~;
 #X obj 266 334 expr~ max(1 - pow(1 - max(0 \, $v1) \, 4) \, 1 - $v2)
 , f 22;
 #X obj 129 190 expr pow(2 \, $i1+1);
-#X obj 500 238 pack 0 100;
+#X obj 414 231 pack 0 100;
 #X obj 95 90 ctl flutter 0;
 #X msg 409 60 sane;
 #X obj 370 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 409 36 btn misc-sane;
+#X obj 459 518 *~;
+#X obj 542 519 *~;
+#X obj 878 90 > 0;
+#X obj 728 127 spigot, f 22;
+#X floatatom 728 156 5 0 0 0 - - -, f 5;
+#X obj 728 87 expr 1 - (52 <= $i1 && $i1 <= 83), f 19;
+#X obj 728 60 notein 64, f 22;
+#X obj 728 204 select 0 1;
+#X obj 726 295 vline~;
+#X msg 855 263 1 10;
+#X obj 726 328 *~ 1;
+#X obj 952 72 r link_tempo;
+#X floatatom 1071 73 5 0 0 0 - - -, f 5;
+#X obj 953 137 expr (60000/$f1)/($f2/4);
+#X obj 1070 99 t b f;
+#X floatatom 1009 185 8 0 0 0 - - -, f 8;
+#X msg 727 262 0 10 \, 1 10 \$1;
+#X obj 727 232 float;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 2 0 22 0;
@@ -276,8 +294,8 @@ roomsize 2 9 1 12 -261689 -1 -1 2324 0;
 #X connect 8 0 2 1;
 #X connect 10 0 14 0;
 #X connect 11 0 15 0;
-#X connect 14 0 13 0;
-#X connect 15 0 12 0;
+#X connect 14 0 29 0;
+#X connect 15 0 30 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
 #X connect 18 0 19 0;
@@ -293,9 +311,31 @@ roomsize 2 9 1 12 -261689 -1 -1 2324 0;
 #X connect 26 0 25 0;
 #X connect 27 0 26 0;
 #X connect 28 0 26 0;
+#X connect 29 0 13 0;
+#X connect 30 0 12 0;
+#X connect 31 0 32 1;
+#X connect 32 0 33 0;
+#X connect 33 0 36 0;
+#X connect 34 0 32 0;
+#X connect 35 0 34 0;
+#X connect 35 1 31 0;
+#X connect 36 0 46 0;
+#X connect 36 1 38 0;
+#X connect 37 0 39 0;
+#X connect 38 0 37 0;
+#X connect 39 0 29 1;
+#X connect 39 0 30 1;
+#X connect 40 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 44 0;
+#X connect 42 0 46 1;
+#X connect 43 0 42 0;
+#X connect 43 1 42 1;
+#X connect 45 0 37 0;
+#X connect 46 0 45 0;
 #X coords 0 -1 1 1 185 60 1 200 10;
 #X restore 244 151 pd flutter;
-#N canvas 1518 23 808 753 mapping 0;
+#N canvas 1518 23 808 753 mapping 1;
 #X obj 359 631 ctlin, f 12;
 #X floatatom 360 660 5 0 0 0 - - -, f 5;
 #X floatatom 402 660 5 0 0 0 - - -, f 5;
@@ -346,7 +386,7 @@ roomsize 2 9 1 12 -261689 -1 -1 2324 0;
 #X restore 25 589 pd mapping;
 #N canvas 518 778 532 466 output 0;
 #X obj 132 37 hsl 42 23 0.01 1 1 0 \$0-v \$0-v volume 7 13 1 9 -245500
--13381 -1 2667 0;
+-13381 -1 4050 0;
 #X obj 176 37 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET \$0-dsp-toggle
 dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #N canvas 1019 468 429 371 dsp 0;
@@ -514,11 +554,11 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X obj 130 229 line~;
 #X obj 303 274 *~;
 #X obj 18 33 hsl 60 18 0 1 0 1 ctl_belay-feed_range ctl_belay-feed_range
-feedback 2 9 1 12 -261234 -1 -1 4042 0;
+feedback 2 9 1 12 -261234 -1 -1 885 0;
 #X obj 18 52 hsl 60 18 0 1 0 1 ctl_belay-cross_range ctl_belay-cross_range
-cross 2 9 1 12 -261234 -1 -1 0 0;
+cross 2 9 1 12 -261234 -1 -1 1180 0;
 #X obj 122 35 hsl 60 18 1 16 0 1 ctl_belay-beats_range ctl_belay-beats_range
-beats 2 9 1 12 -204800 -1 -1 2648 0;
+beats 2 9 1 12 -204800 -1 -1 1967 0;
 #X obj 82 332 pack 0 10;
 #X obj 83 354 line~;
 #X obj 393 473 *~ 1;
@@ -751,7 +791,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 515 195 * 1000;
 #X obj 385 554 vline~;
 #X msg 516 232 0 \$1;
-#X msg 384 299 1 10 \, 0 2.5e+06 10, f 10;
+#X msg 384 299 1 10 \, 0 2.5641e+06 10, f 10;
 #X msg 396 227 set 1 10 \, addcomma \, add2 0 \$1 10, f 14;
 #X connect 0 0 5 0;
 #X connect 1 0 6 0;
@@ -841,7 +881,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 631 664 outlet~;
 #X obj 609 634 *~;
 #X obj 41 47 hsl 160 15 0 1 0 0 empty loop-play-pos empty -2 -8 0 10
--262144 -1 -1 15524 1;
+-262144 -1 -1 6608 1;
 #X obj 41 65 hsl 160 15 0 127 0 0 empty ctl_loop-sttt off_|_4_|_8_|_16_|_32_|_64
 0 8 0 10 -261682 -1 -1 0 1;
 #X obj 190 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
