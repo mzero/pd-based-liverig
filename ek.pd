@@ -1,4 +1,4 @@
-#N canvas 564 60 866 643 10;
+#N canvas 263 89 866 643 10;
 #N canvas 1392 157 441 218 config 0;
 #X obj 102 77 loadbang;
 #X obj 103 152 s resetbang;
@@ -116,25 +116,25 @@ f 11;
 #X connect 45 0 14 0;
 #X coords 0 -1 1 1 185 60 1 10 10;
 #X restore 14 81 pd link-sync;
-#N canvas 986 40 599 337 dt-volumes 0;
+#N canvas 986 50 599 337 dt-volumes 0;
 #X obj 111 -3 ctlin 95 1;
 #X obj 200 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4131 1;
+-1 -1 0 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4257 1;
+-1 -1 0 1;
 #X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4048 1;
+-1 -1 0 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3839 1;
+-1 -1 0 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4006 1;
+-1 -1 0 1;
 #X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3881 1;
+-1 -1 0 1;
 #X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3672 1;
+-1 -1 0 1;
 #X obj 330 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3672 1;
+-1 -1 0 1;
 #X obj 392 69 ctlin 95 8;
 #X obj 387 177 ctlout 95 24;
 #X obj 375 48 ctlin 95 7;
@@ -229,7 +229,7 @@ roomsize 2 9 1 12 -261689 -1 -1 2324 0;
 #X coords 0 -1 1 1 185 60 1 300 10;
 #X restore 314 455 pd verb;
 #X obj 312 22 adc~;
-#N canvas 604 531 1374 601 flutter 1;
+#N canvas 6 250 1265 703 flutter 0;
 #X obj 241 122 r link_tempo;
 #X obj 339 122 r link_phase;
 #X obj 266 310 osc~ 2;
@@ -286,7 +286,7 @@ $i1 && $i1 <= 91)), f 16;
 #X obj 963 322 *;
 #X msg 916 264 1.15;
 #X obj 916 293 t b f;
-#X obj 855 367 r resetbang;
+#X obj 855 179 r resetbang;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 2 0 22 0;
@@ -348,9 +348,10 @@ $i1 && $i1 <= 91)), f 16;
 #X connect 51 0 49 0;
 #X connect 51 1 49 1;
 #X connect 52 0 37 0;
+#X connect 52 0 50 0;
 #X coords 0 -1 1 1 185 60 1 200 10;
 #X restore 244 151 pd flutter;
-#N canvas 1518 23 808 753 mapping 1;
+#N canvas 253 59 808 753 mapping 0;
 #X obj 359 631 ctlin, f 12;
 #X floatatom 360 660 5 0 0 0 - - -, f 5;
 #X floatatom 402 660 5 0 0 0 - - -, f 5;
@@ -401,7 +402,7 @@ $i1 && $i1 <= 91)), f 16;
 #X restore 25 589 pd mapping;
 #N canvas 518 778 532 466 output 0;
 #X obj 132 37 hsl 42 23 0.01 1 1 0 \$0-v \$0-v volume 7 13 1 9 -245500
--13381 -1 4050 0;
+-13381 -1 2667 0;
 #X obj 176 37 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET \$0-dsp-toggle
 dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #N canvas 1019 468 429 371 dsp 0;
@@ -569,11 +570,11 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X obj 130 229 line~;
 #X obj 303 274 *~;
 #X obj 18 33 hsl 60 18 0 1 0 1 ctl_belay-feed_range ctl_belay-feed_range
-feedback 2 9 1 12 -261234 -1 -1 2973 0;
+feedback 2 9 1 12 -261234 -1 -1 885 0;
 #X obj 18 52 hsl 60 18 0 1 0 1 ctl_belay-cross_range ctl_belay-cross_range
-cross 2 9 1 12 -261234 -1 -1 5250 0;
+cross 2 9 1 12 -261234 -1 -1 1180 0;
 #X obj 122 35 hsl 60 18 1 16 0 1 ctl_belay-beats_range ctl_belay-beats_range
-beats 2 9 1 12 -204800 -1 -1 4831 0;
+beats 2 9 1 12 -204800 -1 -1 1967 0;
 #X obj 82 332 pack 0 10;
 #X obj 83 354 line~;
 #X obj 393 473 *~ 1;
@@ -872,7 +873,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 515 195 * 1000;
 #X obj 385 554 vline~;
 #X msg 516 232 0 \$1;
-#X msg 384 299 1 10 \, 0 15360 10, f 10;
+#X msg 384 299 1 10 \, 0 2.5e+06 10, f 10;
 #X msg 396 227 set 1 10 \, addcomma \, add2 0 \$1 10, f 14;
 #X connect 0 0 5 0;
 #X connect 1 0 6 0;
@@ -962,7 +963,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 631 664 outlet~;
 #X obj 609 634 *~;
 #X obj 41 47 hsl 160 15 0 1 0 0 empty loop-play-pos empty -2 -8 0 10
--262144 -1 -1 12290 1;
+-262144 -1 -1 0 1;
 #X obj 41 65 hsl 160 15 0 127 0 0 empty ctl_loop-sttt off_|_4_|_8_|_16_|_32_|_64
 0 8 0 10 -261682 -1 -1 0 1;
 #X obj 190 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -1164,7 +1165,7 @@ for a full bar;
 #X coords 0 -1 1 1 185 60 1 20 20;
 #X restore 244 74 pd loopz;
 #X obj 693 200 chan belay;
-#N canvas 158 537 1262 680 notes 0;
+#N canvas 29 259 1262 680 notes 0;
 #X obj 102 259 notein;
 #X obj 379 48 r port-kb;
 #X obj 98 355 noteout;
@@ -1310,7 +1311,7 @@ Digitakt is fatal., f 20;
 #X connect 64 2 57 0;
 #X coords 0 -1 1 1 185 60 1 100 10;
 #X restore 18 298 pd notes;
-#N canvas 95 352 1129 766 preenfm2-routing 0;
+#N canvas 91 191 1129 766 preenfm2-routing 0;
 #X obj 495 88 ctlin;
 #X obj 496 169 pack i i i i;
 #X obj 535 114 expr $i1-($i1-1)/16*16 \; ($i1-1)/16 + 1;
@@ -1342,20 +1343,20 @@ to manage on a MIDI track. Ah well... no point in sending them \, then.
 #X text 491 49 Forwarder for controls on PreenFM2 channels (9 ~ 12).
 ;
 #X text 549 87 Controls for the PreenFM2 may be received;
-#X obj 72 161 pack i i i i;
-#X obj 111 106 expr $i1-($i1-1)/16*16 \; ($i1-1)/16 + 1;
-#X obj 111 226 expr 9 <= $i1 && $i1 <12;
-#X obj 72 259 spigot;
-#X msg 111 201 float \$3;
-#X obj 72 335 unpack i i i i;
-#X obj 146 418 !=;
-#X obj 73 450 spigot;
-#X obj 135 455 expr $i1 + 16*($i2 - 1), f 13;
-#X obj 71 80 notein;
-#X obj 74 509 noteout, f 9;
-#X obj 171 391 r port-pf;
+#X obj 78 162 pack i i i i;
+#X obj 117 107 expr $i1-($i1-1)/16*16 \; ($i1-1)/16 + 1;
+#X obj 117 227 expr 9 <= $i1 && $i1 <12;
+#X obj 78 260 spigot;
+#X msg 117 202 float \$3;
+#X obj 78 336 unpack i i i i;
+#X obj 152 419 !=;
+#X obj 79 451 spigot;
+#X obj 141 456 expr $i1 + 16*($i2 - 1), f 13;
+#X obj 77 81 notein;
+#X obj 80 510 noteout, f 9;
+#X obj 177 392 r port-pf;
 #X text 70 48 Forwarder for notes to PreenFM2 channels (9 ~ 12).;
-#X obj 257 327 bng 15 250 50 0 empty empty notes 17 7 0 10 -4034 -1
+#X obj 263 328 bng 15 250 50 0 empty empty notes 17 7 0 10 -4034 -1
 -1;
 #X obj 335 328 bng 15 250 50 0 empty empty controls 17 7 0 10 -4032
 -1 -1;
@@ -1366,6 +1367,22 @@ to manage on a MIDI track. Ah well... no point in sending them \, then.
 #X msg 900 149 list 0 64 \$1 0 \, list 0 125 \$1 0 \, list 0 120 \$1
 0 \, list 80 73 \$1 0 \, list 64 115 \$1 0 \, list 64 116 \$1 0 \,
 list 64 117 \$1 0 \, list 64 118 \$1 0, f 18;
+#X obj 1097 119 expr $i1-($i1-1)/16*16 \; ($i1-1)/16 + 1;
+#X obj 1097 239 expr 9 <= $i1 && $i1 <12;
+#X obj 1058 272 spigot;
+#X obj 1132 431 !=;
+#X obj 1059 463 spigot;
+#X obj 1121 468 expr $i1 + 16*($i2 - 1), f 13;
+#X obj 1157 404 r port-pf;
+#X obj 335 345 bng 15 250 50 0 empty empty program 17 7 0 10 -4032
+-1 -1;
+#X obj 1057 93 pgmin;
+#X obj 1058 174 pack i i i;
+#X msg 1097 214 float \$2;
+#X obj 1058 348 unpack i i i;
+#X obj 1060 522 pgmout, f 9;
+#X text 1047 48 Forwarder for program changes on PreenFM2 channels
+(9 ~ 12).;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 0 2 2 0;
@@ -1430,6 +1447,24 @@ list 64 117 \$1 0 \, list 64 118 \$1 0, f 18;
 #X connect 44 0 45 0;
 #X connect 45 0 42 0;
 #X connect 46 0 43 0;
+#X connect 47 0 56 1;
+#X connect 47 1 56 2;
+#X connect 48 0 49 1;
+#X connect 49 0 54 0;
+#X connect 49 0 58 0;
+#X connect 50 0 51 1;
+#X connect 51 0 59 0;
+#X connect 52 0 59 1;
+#X connect 53 0 50 1;
+#X connect 53 0 52 1;
+#X connect 55 0 56 0;
+#X connect 55 1 47 0;
+#X connect 56 0 57 0;
+#X connect 56 0 49 0;
+#X connect 57 0 48 0;
+#X connect 58 0 51 0;
+#X connect 58 1 52 0;
+#X connect 58 2 50 0;
 #X coords 0 -1 1 1 185 60 1 250 300;
 #X restore 17 226 pd preenfm2-routing;
 #N canvas 831 812 412 397 timers 0;
