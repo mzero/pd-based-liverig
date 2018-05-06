@@ -1,4 +1,4 @@
-#N canvas 263 89 866 643 10;
+#N canvas 263 95 866 643 10;
 #N canvas 1392 157 441 218 config 0;
 #X obj 102 77 loadbang;
 #X obj 103 152 s resetbang;
@@ -119,22 +119,22 @@ f 11;
 #N canvas 986 50 599 337 dt-volumes 0;
 #X obj 111 -3 ctlin 95 1;
 #X obj 200 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4048 1;
 #X obj 100 273 ctlout 95 17;
 #X obj 216 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 2754 1;
 #X obj 232 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4048 1;
 #X obj 248 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3798 1;
 #X obj 282 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4382 1;
 #X obj 298 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3923 1;
 #X obj 314 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3839 1;
 #X obj 330 103 vsl 16 54 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3923 1;
 #X obj 392 69 ctlin 95 8;
 #X obj 387 177 ctlout 95 24;
 #X obj 375 48 ctlin 95 7;
@@ -351,7 +351,7 @@ $i1 && $i1 <= 91)), f 16;
 #X connect 52 0 50 0;
 #X coords 0 -1 1 1 185 60 1 200 10;
 #X restore 244 151 pd flutter;
-#N canvas 253 59 808 753 mapping 0;
+#N canvas 253 65 808 753 mapping 0;
 #X obj 359 631 ctlin, f 12;
 #X floatatom 360 660 5 0 0 0 - - -, f 5;
 #X floatatom 402 660 5 0 0 0 - - -, f 5;
@@ -402,7 +402,7 @@ $i1 && $i1 <= 91)), f 16;
 #X restore 25 589 pd mapping;
 #N canvas 518 778 532 466 output 0;
 #X obj 132 37 hsl 42 23 0.01 1 1 0 \$0-v \$0-v volume 7 13 1 9 -245500
--13381 -1 2667 0;
+-13381 -1 3773 0;
 #X obj 176 37 tgl 18 0 THIS_IS_HERE_TO_GET_RID_OF_THE_OUTLET \$0-dsp-toggle
 dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #N canvas 1019 468 429 371 dsp 0;
@@ -570,11 +570,11 @@ dsp 2 9 1 9 -225271 -195568 -33289 1 1;
 #X obj 130 229 line~;
 #X obj 303 274 *~;
 #X obj 18 33 hsl 60 18 0 1 0 1 ctl_belay-feed_range ctl_belay-feed_range
-feedback 2 9 1 12 -261234 -1 -1 885 0;
+feedback 2 9 1 12 -261234 -1 -1 3345 0;
 #X obj 18 52 hsl 60 18 0 1 0 1 ctl_belay-cross_range ctl_belay-cross_range
-cross 2 9 1 12 -261234 -1 -1 1180 0;
+cross 2 9 1 12 -261234 -1 -1 3531 0;
 #X obj 122 35 hsl 60 18 1 16 0 1 ctl_belay-beats_range ctl_belay-beats_range
-beats 2 9 1 12 -204800 -1 -1 1967 0;
+beats 2 9 1 12 -204800 -1 -1 3540 0;
 #X obj 82 332 pack 0 10;
 #X obj 83 354 line~;
 #X obj 393 473 *~ 1;
@@ -795,7 +795,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X connect 27 0 26 0;
 #X coords 0 -1 1 1 185 60 1 300 10;
 #X restore 243 224 pd eq;
-#N canvas 623 494 1065 838 loopz 0;
+#N canvas 134 139 1065 838 loopz 0;
 #X obj 547 269 inlet~;
 #X obj 225 19 r link_phase;
 #X obj 23 47 tgl 15 0 empty loop-playing playback 0 -7 0 10 -262144
@@ -873,7 +873,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 515 195 * 1000;
 #X obj 385 554 vline~;
 #X msg 516 232 0 \$1;
-#X msg 384 299 1 10 \, 0 2.5e+06 10, f 10;
+#X msg 384 299 1 10 \, 0 32268.9 10, f 10;
 #X msg 396 227 set 1 10 \, addcomma \, add2 0 \$1 10, f 14;
 #X connect 0 0 5 0;
 #X connect 1 0 6 0;
@@ -963,7 +963,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X obj 631 664 outlet~;
 #X obj 609 634 *~;
 #X obj 41 47 hsl 160 15 0 1 0 0 empty loop-play-pos empty -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 3338 1;
 #X obj 41 65 hsl 160 15 0 127 0 0 empty ctl_loop-sttt off_|_4_|_8_|_16_|_32_|_64
 0 8 0 10 -261682 -1 -1 0 1;
 #X obj 190 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -979,7 +979,7 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X msg 557 59 resize 360000 \, const 0;
 #X obj 558 32 loadbang;
 #X obj 308 73 r loop-playing;
-#N canvas 263 262 929 688 loopz-control 0;
+#N canvas 263 268 929 688 loopz-control 0;
 #X obj 366 195 tgl 15 0 empty empty 1/8s 17 7 0 10 -262144 -1 -1 0
 8;
 #X obj 381 216 tgl 15 0 empty empty 1/16s 17 7 0 10 -262144 -1 -1 0
@@ -1007,13 +1007,12 @@ lo 5 9 0 10 -204786 -1 -1 2950 0;
 #X msg 467 173 sane;
 #X obj 478 146 btn misc-sane;
 #X obj 139 197 r loop-playing;
-#X obj 54 185 > 0;
-#X msg 107 287 1;
+#X obj 54 215 > 0;
+#X msg 107 317 1;
 #X obj 54 162 r btn_loop-play_in;
-#X obj 139 225 s btn_loop-play_out;
-#X obj 54 231 int;
-#X obj 54 259 select 1;
-#X obj 54 208 select 1;
+#X obj 54 261 int;
+#X obj 54 289 select 1;
+#X obj 54 238 select 1;
 #X text 50 80 loop playing button;
 #X text 52 108 pressing toggles on/off of loop if off \, toggles on
 for a full bar;
@@ -1037,6 +1036,10 @@ for a full bar;
 #X text 522 409 fade out time in beats;
 #X msg 548 515 16;
 #X msg 584 513 8;
+#X obj 187 305 s btn_loop-play_out;
+#X obj 187 276 int;
+#X obj 186 246 delay 50;
+#X text 255 225 to reset LED state after button presses, f 10;
 #X connect 0 0 4 0;
 #X connect 1 0 4 0;
 #X connect 2 0 4 0;
@@ -1044,9 +1047,9 @@ for a full bar;
 #X connect 4 0 5 0;
 #X connect 4 1 6 0;
 #X connect 5 0 7 0;
-#X connect 5 0 35 0;
+#X connect 5 0 34 0;
 #X connect 6 0 9 0;
-#X connect 6 0 35 0;
+#X connect 6 0 34 0;
 #X connect 7 0 8 0;
 #X connect 9 0 8 0;
 #X connect 10 0 4 0;
@@ -1060,32 +1063,35 @@ for a full bar;
 #X connect 15 0 17 0;
 #X connect 16 0 17 0;
 #X connect 18 0 12 0;
-#X connect 18 0 37 0;
+#X connect 18 0 36 0;
 #X connect 19 0 18 0;
-#X connect 20 0 24 0;
-#X connect 20 0 25 1;
-#X connect 21 0 27 0;
+#X connect 20 0 24 1;
+#X connect 20 0 49 0;
+#X connect 21 0 26 0;
 #X connect 22 0 6 0;
 #X connect 23 0 21 0;
-#X connect 25 0 26 0;
-#X connect 26 0 5 0;
-#X connect 26 1 22 0;
-#X connect 27 0 25 0;
-#X connect 33 0 18 0;
-#X connect 37 0 43 0;
-#X connect 38 0 40 0;
-#X connect 39 0 40 0;
-#X connect 41 0 38 1;
-#X connect 42 0 39 0;
-#X connect 42 1 47 0;
-#X connect 42 2 48 0;
-#X connect 42 3 44 0;
-#X connect 42 4 45 0;
-#X connect 43 0 42 0;
-#X connect 44 0 40 0;
-#X connect 45 0 40 0;
-#X connect 47 0 38 0;
-#X connect 48 0 38 0;
+#X connect 23 0 50 0;
+#X connect 24 0 25 0;
+#X connect 25 0 5 0;
+#X connect 25 1 22 0;
+#X connect 26 0 24 0;
+#X connect 32 0 18 0;
+#X connect 36 0 42 0;
+#X connect 37 0 39 0;
+#X connect 38 0 39 0;
+#X connect 40 0 37 1;
+#X connect 41 0 38 0;
+#X connect 41 1 46 0;
+#X connect 41 2 47 0;
+#X connect 41 3 43 0;
+#X connect 41 4 44 0;
+#X connect 42 0 41 0;
+#X connect 43 0 39 0;
+#X connect 44 0 39 0;
+#X connect 46 0 37 0;
+#X connect 47 0 37 0;
+#X connect 49 0 48 0;
+#X connect 50 0 49 0;
 #X restore 356 441 pd loopz-control;
 #X obj 329 19 r link-quantum;
 #X obj 329 41 - 0.5;
