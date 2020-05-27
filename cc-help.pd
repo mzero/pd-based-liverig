@@ -1,0 +1,43 @@
+#N canvas 1189 848 831 465 10;
+#X floatatom 41 167 5 0 0 0 - - -, f 5;
+#X obj 43 121 hsl 64 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1800 1;
+#X obj 36 67 cc-map vol 64 13;
+#X obj 42 207 r cc_vol;
+#X floatatom 42 229 5 0 0 0 - - -, f 5;
+#X floatatom 258 166 5 0 0 0 - - -, f 5;
+#X obj 260 120 hsl 64 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4200 1;
+#X floatatom 259 228 5 0 0 0 - - -, f 5;
+#X obj 253 66 cc-map bal 65 13;
+#X obj 41 145 cc vol 100;
+#X msg 131 119 sane;
+#X obj 258 144 cc-range bal 0 -1 1;
+#X obj 259 206 r cc_bal;
+#X msg 337 117 sane;
+#X floatatom 470 165 5 0 0 0 - - -, f 5;
+#X obj 472 119 hsl 64 15 0 6 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2600 1;
+#X floatatom 471 227 5 0 0 0 - - -, f 5;
+#X msg 549 116 sane;
+#X obj 467 65 cc-map unit 66 13;
+#X obj 470 143 cc-range unit 2 0 6;
+#X obj 471 205 r cc_unit;
+#X floatatom 562 197 5 0 0 0 - - -, f 5;
+#X obj 562 175 expr 1 << floor($f1);
+#X obj 562 217 cc-disp unit;
+#X connect 1 0 9 0;
+#X connect 3 0 4 0;
+#X connect 6 0 11 0;
+#X connect 9 0 0 0;
+#X connect 10 0 9 0;
+#X connect 11 0 5 0;
+#X connect 12 0 7 0;
+#X connect 13 0 11 0;
+#X connect 15 0 19 0;
+#X connect 17 0 19 0;
+#X connect 19 0 14 0;
+#X connect 19 0 22 0;
+#X connect 20 0 16 0;
+#X connect 21 0 23 0;
+#X connect 22 0 21 0;
